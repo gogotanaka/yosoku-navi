@@ -1,0 +1,45 @@
+<%= image_tag('blog_title.jpg')%>
+<div class="detail">
+  <p>株式投資情報、個人投資家、仕手株・仕手筋情報、ファンド・機関投資家、ブログランキングを見れば全ての情報が手に入る！</p>
+  <p>投資顧問業者顔負けの情報発信ブログも多数あり！無料の情報収集こそ強い投資家への第一歩！</p>
+</div>
+<table class="blog_table table-striped-blog">
+  <tr>
+    <th width="50px">順位</th>
+    <th width="60px"></th>
+    <th>ページ名/紹介文</th>
+    <th width="40px">週間<br>IN</th>
+    <th width="40px">週間<br>OUT</th>
+    <th width="40px">通算<br>IN</th>
+  </tr>
+
+<% @blogs.each.with_index(1) do |blog,i| %>
+  <tr>
+    <td class="rank"><%= i %>位</td>
+    <td class="image"><%= image_tag(blog.image_url, {width: "60px",height: "60px"}) %></td>
+    <td>
+      <div class="title">
+        <%= link_to(blog.title,{controller: :blogs, action: :out, id: blog.id}) %>
+      </div>
+      <div class="describe">
+        <%= blog.describe %>
+      </div>
+      <% blog.entries.each do |entry| %>
+        <div class="entry">  
+          <div class="word"><%= link_to entry.title, entry.url %></div>
+          <div class="time"><%= entry.published.strftime("%Y年%m月%d日 %H:%M:%S") %></div>
+        </div>
+      <% end %>
+
+    </td>
+    <td><%= week_count(blog.blog_counts.where('created_at >=?', Time.now - 604800).pluck(:view) || []) %></td>
+    <td><%= blog.out %></td>
+    <td><%= blog.in %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<% content_for :blog_menu do %>
+d
+<% end %>

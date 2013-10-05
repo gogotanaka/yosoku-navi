@@ -1,0 +1,25 @@
+<%= image_tag(@bar)%>
+<table class="stock_table">
+  <tr >
+  	<% @ths.each.with_index(0) do |th,i| %>
+  		<% if @impo[i]==0  %>
+  			<th><%= th %></th>
+  		<% else %>
+  			<th colspan="<%= @impo[i].to_s  %>"><%= th %></th>
+  		<% end %>
+  	<% end %>
+    <th>掲示板</th>
+  </tr>
+	<% @tds.each do |tds| %>
+		<tr>
+			<% tds.each.with_index(1) do |td, i| %>
+				<td class="<%= "plus" if (i == 7 && @id == 1) %>"><%= td %></td>
+			<% end %>
+      <td>
+        <% board = Board.find_by_stock_id(Stock.find_by_code(@tds[1])) %>
+        <%= link_to '掲示板', board %>
+      </td>
+		</tr>
+	<% end %>
+</table>
+

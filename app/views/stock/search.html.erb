@@ -1,0 +1,4 @@
+
+  <% @search_stocks.each do |stock| %>
+    【<%= stock.code %>】<%= link_to stock.name, stock_path(stock) %><br>
+  <% end %>

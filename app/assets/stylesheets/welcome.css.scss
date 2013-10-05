@@ -1,0 +1,98 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#stock_hot_container {
+  img {
+    display: block;
+  }
+  #stock_hot {
+    border: 1px solid #ccc;
+    #yahoo_update {
+      background-color: #eee;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+.welcome_index_box {
+  margin: 30px 0;
+  img {
+    display: block;
+  }
+  .box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    #info_table {
+      width: 280px;
+      float: left;
+      margin-right: 30px;
+      table {
+        width: 100%;
+        tr {
+          height: 26px;
+          border-bottom: 1px solid #4183C4;
+        }
+        .stock_table_td_align {
+          text-align: right;
+        }
+      }
+    }
+    #stock_chart_box {
+      width: 260px;
+      float: left;
+    }
+  }
+  .stream_box {
+    margin-right: 10px;
+    padding: 5px;
+    float: left;
+    .stream {
+      border: 1px solid #ccc;
+      width: 300px;
+      .contents {
+        padding: 5px;
+        height: 200px;
+        overflow-y: auto;
+      }
+    }
+    .plus {
+      color: red;
+    }
+  }
+
+  .stream_box_2 {
+    padding: 5px;
+    float: left;
+    .stream {
+      border: 1px solid #ccc;
+      width: 300px;
+      .contents {
+        padding: 5px;
+        height: 200px;
+        overflow-y: auto;
+      }
+    }
+    .minus {
+      color: blue;
+    }
+  }
+}
+.stock_table {
+  border-collapse: collapse;
+  th {
+    background-color: rgb(213,230,250);
+    border: 1px solid rgb(202,222,249);
+  }
+  td {
+    border: 1px solid rgb(202,222,249);
+  }
+}
+
+p.plus {
+        color: rgb(128,182,100);
+}
+
+p.minus {
+        color: rgb(246,77,79);
+}

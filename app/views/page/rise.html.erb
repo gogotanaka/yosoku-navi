@@ -1,0 +1,13 @@
+<div class="detail">
+	<p>仕手筋、投資ファンド、機関投資家、多数の情報網から得た投資情報をレポート形式で無料公開しております。基本、毎日更新となりますのでご期待下さい。</p>
+</div>
+<%= image_tag('rise_bar.jpg')%>
+<% Piece.order("created_at DESC").limit(5).each do |piece| %>
+	<div class="piece clearfix">
+		<div class="title"><%= link_to piece.title, page_piece_path(id: piece.id), class: "title_text" %></div>
+		<br>
+		<%= piece.contents.html_safe %>
+		<p style="padding-top:30px; color:#999;float:right;"><%= complete_date(piece.updated_at + 32400) %></p>
+	</div>
+<% end %>
+<%= auto_discovery_link_tag(:rss, "http://iblog.com") %>
