@@ -47,21 +47,8 @@
 
 		</header>
 		<%= render partial: 'layouts/menu' %>
-		<div id="pan-navi" class="clearfix">
-			<ol>
-				<li class="arrow"><a href="./index.html">HOME</a></li>
-				<li><strong>運営者情報</strong></li>
-			</ol>
-		</div>
-		<div id="content" class="clearfix">
-			<div id="content-box" class="clearfix">
-				<div id="main" class="clearfix">
-					<div class="help-article">
-						<p>
-							<%= yield %>
-						</p>
-					</div>
-				</div>
+
+				<%= yield %>
 				<%= render partial: 'layouts/sidebar' %>
 			</div>
 			<p class="top-link"><a href="#header"><img src="/img/botton-top.png" alt="TOP" /></a></p>

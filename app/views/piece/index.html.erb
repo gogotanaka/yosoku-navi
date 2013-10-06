@@ -1,0 +1,55 @@
+
+
+<%= auto_discovery_link_tag(:rss, "http://iblog.com") %>
+
+<!--line-->
+<div id="pan-navi" class="clearfix">
+	<ol>
+		<li class="arrow"><a href="./index.html">HOME</a></li>
+		<li><strong>仕手株速報</strong></li>
+	</ol>
+</div>
+
+<div id="content" class="clearfix">
+	<div id="content-box" class="clearfix">
+
+
+<article id="main" class="clearfix">
+
+	<div class="title-bar">
+		<h1><img src="./img/title-bar-sitekabu-list.png" alt="仕手株速報" /></h1>
+	</div>
+
+	<ul class="sitekabu-list-content">
+		<% Piece.order("created_at DESC").limit(5).each do |piece| %>
+			<li>
+				<h2><%= link_to piece.title, piece_path(piece.id) %></h2>
+				<dl>
+					<dt><%= complete_date(piece.updated_at + 32400) %></dt>
+					<dd>
+						<%= piece.contents.html_safe %>
+					</dd>
+					<dd>
+						<%= link_to "続きを読む&gt;&gt;", piece_path(piece.id, title: piece.title) %>
+					</dd>
+				</dl>
+			</li>
+		<% end %>
+	</ul>
+
+
+	<ul class="pn-navi clearfix">
+		<li><a href="./sitekabu-list.html">&lt;&lt;前へ</a></li>
+		<li class="current"><span>1</span></li>
+		<li class="number"><a href="./sitekabu-list.html">2</a></li>
+		<li class="number"><a href="./sitekabu-list.html">3</a></li>
+		<li class="number"><a href="./sitekabu-list.html">4</a></li>
+		<li class="number"><a href="./sitekabu-list.html">5</a></li>
+		<li class="number"><a href="./sitekabu-list.html">6</a></li>
+		<li class="number"><a href="./sitekabu-list.html">7</a></li>
+		<li class="number"><a href="./sitekabu-list.html">8</a></li>
+		<li class="number"><a href="./sitekabu-list.html">9</a></li>
+		<li><a href="./sitekabu-list.html">次へ&gt;&gt;</a></li>
+	</ul>
+
+</article>

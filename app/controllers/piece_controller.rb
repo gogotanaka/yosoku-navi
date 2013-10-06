@@ -6,4 +6,7 @@ class PieceController < ApplicationController
     Piece.find(params[:id]).destroy
     redirect_to :back
   end
+
+  def index
+  end
 end

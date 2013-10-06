@@ -5,6 +5,12 @@ class BatchUpdate
 
   SC_OK = "200"
 
+  def self.start
+    news
+    summary
+    creater
+  end
+
   def self.convert(url)
     begin
       page = open(url)
