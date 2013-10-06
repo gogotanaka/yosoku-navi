@@ -1,5 +1,11 @@
 Kabudata::Application.routes.draw do
 
+  resources :glossaries
+
+
+  resources :beginners
+
+
   resources :stock
   resources :piece
 
