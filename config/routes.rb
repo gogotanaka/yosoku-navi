@@ -1,5 +1,11 @@
 Kabudata::Application.routes.draw do
 
+  resources :stocks
+
+
+  resources :toushikomons
+
+
   resources :glossaries
 
 

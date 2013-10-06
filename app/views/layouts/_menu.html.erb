@@ -6,9 +6,15 @@
 		<li class="g-navi-4"><%= link_to "投資顧問会社口コミ", {controller: :boards, action: :index_consul, id: 1} %></li>
 		<li class="g-navi-5"><a href="./blog-rank-kabu.html">株ブログランキング</a></li>
 		<li class="g-navi-6"><%= link_to "投資家ブログランキング", blogs_path %></li>
-		<li class="g-navi-7"><a href="./beginner-list.html">株初心者</a></li>
-		<li class="g-navi-8"><a href="./glossary-list.html">株用語集</a></li>
-		<li class="g-navi-9"><a href="./brand-list.html">銘柄一覧</a></li>
+		<li class="g-navi-7">
+			<%= link_to "超初心者", beginners_path %>
+		</li>
+		<li class="g-navi-8">
+			<%= link_to "株用語集", glossaries_path %>
+		</li>
+		<li class="g-navi-9">
+			<%= link_to "銘柄一覧", stocks_path %>
+		</li>
 		<%- if false %><li class="g-navi-10"><%= link_to "投資顧問一覧", page_consultant_path %></li><% end %>
 	</ul>
 </nav>

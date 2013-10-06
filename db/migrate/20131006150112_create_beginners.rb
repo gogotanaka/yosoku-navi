@@ -2,7 +2,8 @@ class CreateBeginners < ActiveRecord::Migration
   def change
     create_table :beginners do |t|
       t.string :title
-      t.string :contents
+      t.integer :category
+      t.text :contents
 
       t.timestamps
     end

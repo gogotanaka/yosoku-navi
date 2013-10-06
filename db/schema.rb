@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006150112) do
+ActiveRecord::Schema.define(:version => 20131006152353) do
 
   create_table "beginners", :force => true do |t|
     t.string   "title"
-    t.string   "contents"
+    t.text     "contents"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(:version => 20131006150112) do
     t.string   "sender"
     t.text     "contents"
     t.integer  "board_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "glossaries", :force => true do |t|
+    t.string   "title"
+    t.text     "contents"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -105,9 +112,9 @@ ActiveRecord::Schema.define(:version => 20131006150112) do
     t.string   "high"
     t.string   "low"
     t.string   "chart"
+    t.string   "industry"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.string   "industry"
   end
 
   add_index "stocks", ["code"], :name => "index_stocks_on_code"
@@ -116,6 +123,19 @@ ActiveRecord::Schema.define(:version => 20131006150112) do
   create_table "summaries", :force => true do |t|
     t.string   "price"
     t.string   "comparison"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "toushikomons", :force => true do |t|
+    t.string   "name"
+    t.string   "site_name"
+    t.string   "url"
+    t.string   "adress"
+    t.string   "owner"
+    t.string   "phone"
+    t.string   "kinsyo"
+    t.text     "contents"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
