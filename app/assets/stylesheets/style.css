@@ -143,7 +143,6 @@ table .corners a:hover{ color:#FF00FF;}
 #stock-content #tab li a,#brand-list-content #brand-menu li span{ width:98px; height:29px; line-height:29px; font-size:13px; float:left; text-align:center; background:#FEFEFE; background: -moz-linear-gradient(top, #FEFEFE, #E4E4E4); background: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#E4E4E4)); cursor:pointer; border:#CCCCCC solid 1px; border-radius:5px 5px 0 0/ 5px 5px 0 0; -webkit-border-top-left-radius: 5px;  -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; text-decoration:none; color:#333333;}
 
 #stock-content #tab li a:hover,#brand-list-content #brand-menu li span:hover{ background:#E4E4E4; background: -moz-linear-gradient(top, #E4E4E4, #FEFEFE); background: -webkit-gradient(linear, left top, left bottom, from(#E4E4E4), to(#FEFEFE));}
-
 #stock-content #tab li.present a,#brand-list-content #brand-menu li.now span{ background:#E4E4E4; background: -moz-linear-gradient(top, #E4E4E4, #FEFEFE); background: -webkit-gradient(linear, left top, left bottom, from(#E4E4E4), to(#FEFEFE));}
 #stock-content #page1 .content-list-box{ padding-bottom:20px;}
 #stock-content #page1 .content-list,#stock-content #page2 .bbs-2ch-list,#stock-content #page3 .bbs-yahoo-list,.toushikomon-review-list,#sitekabu-list .sitekabu-list-content li,#stock-list .stock-list-content{ border-bottom:#CCCCCC dashed 1px; padding-bottom:15px; margin-bottom:15px;}
@@ -155,8 +154,8 @@ table .corners a:hover{ color:#FF00FF;}
 #stock-content #page1 .content-list ul li,#stock-list .stock-list-content ul li{ float:left; margin-right:20px; height:30px; line-height:30px;}
 #stock-content #page1 .content-list ul li a,#stock-list .stock-list-content ul li a{ height:30px; line-height:30px; display:block;}
 #stock-content #page1 .content-list ul .good a , #stock-content #page1 .content-list ul .bad a , #stock-list .stock-list-content ul .good a , #stock-list .stock-list-content ul .bad a{ padding-left:90px;}
-#stock-content #page1 .content-list ul .good a,#stock-list .stock-list-content ul .good a { background:url(../img/button-good.png) no-repeat left top;}
-#stock-content #page1 .content-list ul .bad a,#stock-list .stock-list-content ul .bad a  { background:url(../img/button-bad.png) no-repeat left top;}
+#stock-content #page1 .content-list ul .good a, .stock-list-content ul .good a { background:url(button-good.png) no-repeat left top;}
+#stock-content #page1 .content-list ul .bad a,#stock-list .stock-list-content ul .bad a  { background:url(button-bad.png) no-repeat left top;}
 #stock-content #page1 .content-list ul .reply,#stock-list .stock-list-content ul .reply{ margin-right:0;}
 #stock-content #page1 .content-list ul .reply a ,#stock-list .stock-list-content ul .reply a{ width:100px; background:url(../img/button-reply.png) no-repeat left top;}
 #stock-content #page1 .content-list ul .reply a:hover ,#stock-list .stock-list-content ul .reply a:hover{ background:url(../img/button-reply-on.png) no-repeat left top; }
