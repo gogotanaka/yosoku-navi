@@ -11,10 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006152353) do
+ActiveRecord::Schema.define(:version => 20131012110123) do
 
   create_table "beginners", :force => true do |t|
     t.string   "title"
+    t.integer  "category"
     t.text     "contents"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -60,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20131006152353) do
 
   create_table "glossaries", :force => true do |t|
     t.string   "title"
+    t.integer  "category"
     t.text     "contents"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -95,7 +97,7 @@ ActiveRecord::Schema.define(:version => 20131006152353) do
 
   create_table "pieces", :force => true do |t|
     t.string   "title"
-    t.text     "contents"
+    t.string   "contents"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -136,6 +138,7 @@ ActiveRecord::Schema.define(:version => 20131006152353) do
     t.string   "phone"
     t.string   "kinsyo"
     t.text     "contents"
+    t.integer  "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
