@@ -1,5 +1,8 @@
 Kabudata::Application.routes.draw do
 
+  resources :pieces
+
+
   resources :stocks
 
 

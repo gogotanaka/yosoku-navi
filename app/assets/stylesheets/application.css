@@ -47,16 +47,16 @@ p{ line-height:1.3;}
 .pn-navi li{ float:left; margin-right:10px;}
 .pn-navi li.current span{ padding:5px; background:#EFEFEF; border:#CCCCCC solid 1px; font-weight:bold;}
 .pn-navi li.number a{ padding:5px; background:#EFEFEF; border:#CCCCCC solid 1px;}
-.rank-1{ background:url(../img/icon-rank-1.png) top left no-repeat;}
-.rank-2{ background:url(../img/icon-rank-2.png) top left no-repeat;}
-.rank-3{ background:url(../img/icon-rank-3.png) top left no-repeat;}
-.rank-4{ background:url(../img/icon-rank-4.png) top left no-repeat;}
-.rank-5{ background:url(../img/icon-rank-5.png) top left no-repeat;}
+.rank-1{ background:url(icon-rank-1.png) top left no-repeat;}
+.rank-2{ background:url(icon-rank-2.png) top left no-repeat;}
+.rank-3{ background:url(icon-rank-3.png) top left no-repeat;}
+.rank-4{ background:url(icon-rank-4.png) top left no-repeat;}
+.rank-5{ background:url(icon-rank-5.png) top left no-repeat;}
 .top-link{ text-align:right; height:35px;}
 
 #pan-navi{ width:1120px; height:50px; line-height:50px; margin:0 auto;}
 #pan-navi ol li{ float:left; padding-right:30px; margin-right:15px;}
-#pan-navi ol li.arrow{ background:url(../img/icon-arrow.png) no-repeat right 18px;;}
+#pan-navi ol li.arrow{ background:url(icon-arrow.png) no-repeat right 18px;;}
 #pan-navi ol li strong{ font-weight:normal;}
 
 /*Table Style */
@@ -168,11 +168,11 @@ table .corners a:hover{ color:#FF00FF;}
 #stock-content #page1 .content-list ul li,#stock-list .stock-list-content ul li{ float:left; margin-right:20px; height:30px; line-height:30px;}
 #stock-content #page1 .content-list ul li a,#stock-list .stock-list-content ul li a{ height:30px; line-height:30px; display:block;}
 #stock-content #page1 .content-list ul .good a , #stock-content #page1 .content-list ul .bad a , #stock-list .stock-list-content ul .good a , #stock-list .stock-list-content ul .bad a{ padding-left:90px;}
-#stock-content #page1 .content-list ul .good a,#stock-list .stock-list-content ul .good a { background:url(../img/button-good.png) no-repeat left top;}
-#stock-content #page1 .content-list ul .bad a,#stock-list .stock-list-content ul .bad a  { background:url(../img/button-bad.png) no-repeat left top;}
+#stock-content #page1 .content-list ul .good a,#stock-list .stock-list-content ul .good a { background:url(button-good.png) no-repeat left top;}
+#stock-content #page1 .content-list ul .bad a,#stock-list .stock-list-content ul .bad a  { background:url(button-bad.png) no-repeat left top;}
 #stock-content #page1 .content-list ul .reply,#stock-list .stock-list-content ul .reply{ margin-right:0;}
-#stock-content #page1 .content-list ul .reply a ,#stock-list .stock-list-content ul .reply a{ width:100px; background:url(../img/button-reply.png) no-repeat left top;}
-#stock-content #page1 .content-list ul .reply a:hover ,#stock-list .stock-list-content ul .reply a:hover{ background:url(../img/button-reply-on.png) no-repeat left top; }
+#stock-content #page1 .content-list ul .reply a ,#stock-list .stock-list-content ul .reply a{ width:100px; background:url(button-reply.png) no-repeat left top;}
+#stock-content #page1 .content-list ul .reply a:hover ,#stock-list .stock-list-content ul .reply a:hover{ background:url(button-reply-on.png) no-repeat left top; }
 #stock-content #page1 .content-list ul .reply a span ,#stock-list .stock-list-content ul .reply a span{ display:none;}
 #stock-content #page2 #bbs-2ch-menu{ height:30px; margin-bottom:15px; border-bottom:#CCCCCC solid 1px;}
 #stock-content #page2 #bbs-2ch-menu li span{ width:148px; height:29px; line-height:29px; float:left; border-top:#CCCCCC solid 1px; border-left:#CCCCCC solid 1px; border-right:#CCCCCC solid 1px; background:#D4D4D4; color:#000000; text-align:center; text-decoration:none; font-size:13px; cursor:pointer;}
@@ -180,7 +180,7 @@ table .corners a:hover{ color:#FF00FF;}
 #stock-content #page2 #bbs-2ch-menu li span:hover{ background:#F6F6F6;}
 #stock-content #page3 .bbs-yahoo-list dl dt{ margin-bottom:10px; font-weight:bold;}
 #stock-content #page4 ul{ padding-bottom:10px; border-bottom:#CCCCCC dashed 1px;}
-#stock-content #page4 ul li{ margin-bottom:10px; padding-left:25px; min-height:25px; background:url(../img/icon-book.png) no-repeat top left;}
+#stock-content #page4 ul li{ margin-bottom:10px; padding-left:25px; min-height:25px; background:url(icon-book.png) no-repeat top left;}
 #stock-content #page4 ul li a{ margin-right:20px;}
 #stock-content #page5 table{ font-size:15px;}
 #stock-content #page5 table tr td{ height:35px; padding-left:10px; text-align:left;}
