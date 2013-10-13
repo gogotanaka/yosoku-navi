@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @toushikomon_board.title %>
+</p>
+
+<p>
+  <b>Toushikomon:</b>
+  <%= @toushikomon_board.toushikomon_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_toushikomon_board_path(@toushikomon_board) %> |
+<%= link_to 'Back', toushikomon_boards_path %>

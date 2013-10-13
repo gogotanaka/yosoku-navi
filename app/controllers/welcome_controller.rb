@@ -5,13 +5,13 @@ def get_content(html, tag, className, index, childPath=nil)
 end
 class WelcomeController < ApplicationController
 	def index
-    @codes = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=56&mk=1").css("tr.rankingTabledata").map{|x| x.css("td")[1].content }[0..10]
+    #@codes = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=56&mk=1").css("tr.rankingTabledata").map{|x| x.css("td")[1].content }[0..10]
     @summary = Summary.all
     @news = News.order("updated_at ASC")
 
-    @up = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=1&mk=1&tm=d&vl=a").css("tbody tr").map{|x| [x.css("td")[0].inner_text, x.css("td")[1].inner_text, x.css("td")[3].inner_text,x.css("td")[5].inner_text,x.css("td")[7].inner_text,]}
+    #@up = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=1&mk=1&tm=d&vl=a").css("tbody tr").map{|x| [x.css("td")[0].inner_text, x.css("td")[1].inner_text, x.css("td")[3].inner_text,x.css("td")[5].inner_text,x.css("td")[7].inner_text,]}
 
-    @down = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=2&mk=1&tm=d&vl=a").css("tbody tr").map{|x| [x.css("td")[0].inner_text, x.css("td")[1].inner_text, x.css("td")[3].inner_text,x.css("td")[5].inner_text,x.css("td")[7].inner_text,]}
+    #@down = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=2&mk=1&tm=d&vl=a").css("tbody tr").map{|x| [x.css("td")[0].inner_text, x.css("td")[1].inner_text, x.css("td")[3].inner_text,x.css("td")[5].inner_text,x.css("td")[7].inner_text,]}
   end
 
   def show

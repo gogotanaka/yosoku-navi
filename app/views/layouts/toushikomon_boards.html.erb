@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>運営者情報 - 株価予想NAVI</title>
+	<meta name="copyright" content="&copy;株価予想NAVI" />
+	<meta name="description" content="" /> 
+	<meta property="og:site-name" content="株価予想NAVI" />
+	<meta property="og:title" content="運営者情報 - 株価予想NAVI" />
+	<meta property="og:description" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:type" content="" />
+	<meta property="og:image" content="" />
+	<meta property="fb:admins" content="100001675413043" />
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+	{lang: 'ja'}
+	</script>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="toushikomon-review">
+
+	<!--wrapper-->
+	<div id="wrapper" class="clearfix">
+
+		<!--header-->
+		<header id="header" class="clearfix">
+
+			<p><a href="./index.html"><img src="/img/logo.png" alt="株価予想NAVI" /></a></p>
+
+			<div class="mail-box">
+				<form action="" class="clearfix">
+					<input type="text" value="メールアドレスを入力していください。" id="mail" />
+					<input type="image" src="/img/botton-mail.png" alt="注目銘柄を受け取る" />
+				</form>
+			</div>
+
+		</header>
+		<%= render partial: 'layouts/menu' %>
+
+				<%= yield %>
+				<%= render partial: 'layouts/sidebar' %>
+			</div>
+			<p class="top-link"><a href="#header"><img src="/img/botton-top.png" alt="TOP" /></a></p>
+		</div>
+		<%= render partial: 'layouts/footer' %>
+	</div>
+</body>
+</html>
