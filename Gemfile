@@ -25,7 +25,7 @@ gem "mini_magick"
 # Use unicorn as the app server
 gem 'unicorn'
 # Deploy with Capistrano
-gem 'capistrano'
+gem 'capistrano', "2.15.5"
 gem 'feedzirra'
 
 gem 'sitemap_generator'
