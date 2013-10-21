@@ -16,8 +16,12 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select :category, {"株の基本的な仕組みを知る" => 1, "証券会社で口座を開設する" => 2, "株式取引を初めてみよう" => 3, "チャートの見方を覚えよう" => 4, "株式投資で知っておきたい情報" => 5} %>
+  </div>
+  <div class="field">
     <%= f.label :contents %><br />
-    <%= f.text_field :contents %>
+    <%= f.text_area :contents %>
   </div>
   <div class="actions">
     <%= f.submit %>

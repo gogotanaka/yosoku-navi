@@ -2,7 +2,12 @@ class BeginnersController < ApplicationController
   # GET /beginners
   # GET /beginners.json
   def index
-    @beginners = Beginner.all
+    @beginners = Beginner
+    @b1 = @beginners.where(category: 1)
+    @b2 = @beginners.where(category: 2)
+    @b3 = @beginners.where(category: 3)
+    @b4 = @beginners.where(category: 4)
+    @b5 = @beginners.where(category: 5)
 
     respond_to do |format|
       format.html # index.html.erb
