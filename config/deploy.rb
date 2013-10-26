@@ -10,7 +10,7 @@ load "config/recipes/check"
 
 server "106.187.46.171", :web, :app, :db, primary: true
 
-set :application, "yosoku-navi"
+set :application, "yosoku_navi"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
