@@ -15,5 +15,6 @@ namespace :deploy do
     run "#{sudo} apt-get -y install libxslt-dev libxml2-dev"
     run "#{sudo} apt-get -y install libdjvulibre-dev libjpeg-dev libtiff-dev libwmf-dev libmagickcore-dev libmagickwand-dev libmagick++-dev"
     run "#{sudo} apt-get -y install imagemagick"
+    run "#{sudo} apt-get -y install libcurl4-openssl-dev"
    end
 end
