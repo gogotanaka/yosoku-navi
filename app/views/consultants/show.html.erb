@@ -1,0 +1,196 @@
+
+
+<!--pan-navi-->
+<div id="pan-navi" class="clearfix">
+    <ol>
+        <li class="arrow"><a href="./index.html">HOME</a></li>
+        <li class="arrow"><a href="./toushikomon-list.html">投資顧問一覧</a></li>
+        <li><strong>アイリンクインベストメント</strong></li>
+    </ol>
+</div>
+<!--//pan-navi-->
+
+<!--content-->
+<div id="content" class="clearfix">
+
+    <!--content-box-->
+    <div id="content-box" class="clearfix">
+
+        <!--main-->
+        <article id="main" class="clearfix">
+
+            <div class="title-bar">
+                <h1>アイリンクインベストメント</h1>
+            </div>
+
+            <div class="toushikomon-data clearfix">
+
+                <div>
+                    <dl class="clearfix">
+                        <dt>会社名</dt>
+                        <dd>株式会社 アイリンクインベストメント</dd>
+                        <dt>サイト名</dt>
+                        <dd>投資顧問のアイリンクインベストメント</dd>
+                        <dt>URL</dt>
+                        <dd>http://ilinkinvestment.com/</dd>
+                        <dt>所在地 </dt>
+                        <dd>福岡市中央区天神2-7-21 天神プライム6F</dd>
+                        <dt>責任者名</dt>
+                        <dd>岩本 壮一郎</dd>
+                        <dt>電話番号</dt>
+                        <dd>092-404-4444</dd>
+                        <dt>金商</dt>
+                        <dd>福岡財務支局長（金商）第11号</dd>
+                    </dl>
+
+                </div>
+
+                <img src="./img/thumbnail-big.png" alt="アイリンクインベストメント" />
+
+            </div>
+
+            <section class="toushikomon-dis">
+                <h2>アイリンクインベストメントの特徴と料金体系</h2>
+                <p>
+                    アイリンク インベストメントは、無料で「銘柄診断」「銘柄予想」を受けることができます。<br />
+                    さらに、無料メルマガも配信しているため使い勝手のいい投資顧問サイトになっています。<br />
+                    サービスと料金体系に関しては、「マネトレ株式コース￥21,000/月」「マネトレ日経225コース￥21,000/月」「ダブルコース￥31,500/月」となっています。
+                </p>
+            </section>
+
+            <section class="toushikomon-review">
+                <h2>アイリンクインベストメントの口コミ</h2>
+
+                <ul class="toushikomon-review-list-box">
+                    <li class="toushikomon-review-list clearfix">
+                        <dl class="clearfix">
+                            <dt>名無しさん</dt>
+                            <dd>2013/06/18(金) 18:08</dd>
+                        </dl>
+                        <p>アイリンクインベストはなかなか使える</p>
+                    </li>
+                    <li class="toushikomon-review-list clearfix">
+                        <dl class="clearfix">
+                            <dt>名無しさん</dt>
+                            <dd>2013/06/18(金) 18:08</dd>
+                        </dl>
+                        <p>アイリンクインベストはなかなか使える</p>
+                    </li>
+                    <li class="toushikomon-review-list clearfix">
+                        <dl class="clearfix">
+                            <dt>名無しさん</dt>
+                            <dd>2013/06/18(金) 18:08</dd>
+                        </dl>
+                        <p>アイリンクインベストはなかなか使える</p>
+                    </li>
+                    <li class="toushikomon-review-list clearfix">
+                        <dl class="clearfix">
+                            <dt>名無しさん</dt>
+                            <dd>2013/06/18(金) 18:08</dd>
+                        </dl>
+                        <p>アイリンクインベストはなかなか使える</p>
+                    </li>
+                    <li class="toushikomon-review-list clearfix">
+                        <dl class="clearfix">
+                            <dt>名無しさん</dt>
+                            <dd>2013/06/18(金) 18:08</dd>
+                        </dl>
+                        <p>アイリンクインベストはなかなか使える</p>
+                    </li>
+                </ul>
+
+                <div class="from-write">
+                    <h3>口コミを書き込みする</h3>
+                    <div class="clearfix">
+                        <form action="">
+                            <dl class="clearfix">
+                                <dt><label for="form-stock-name">お名前</label></dt>
+                                <dd><input type="text" name="" id="form-stock-name" /></dd>
+                            </dl>
+                            <p><textarea name=""></textarea></p>
+                            <ul>
+                                <li><input type="checkbox" /><a href="./kiyaku.html">利用規約</a>に同意して書き込む</li>
+                                <li><input type="image" src="./img/button-form-write.png" value="書き込み" alt="書き込み" onMouseOver="this.src='./img/button-form-write-on.png'" onMouseOut="this.src='./img/button-form-write.png'" /></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+        </article>
+        <!--//main-->
+
+
+
+
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @consultant.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @consultant.category %>
+</p>
+
+<p>
+  <b>Contents:</b>
+  <%= @consultant.contents %>
+</p>
+
+<p>
+  <b>Site name:</b>
+  <%= @consultant.site_name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @consultant.url %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @consultant.place %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @consultant.person %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @consultant.phone %>
+</p>
+
+<p>
+  <b>Kinsyo:</b>
+  <%= @consultant.kinsyo %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @consultant.rate %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @consultant.info %>
+</p>
+
+<p>
+  <b>Regist:</b>
+  <%= @consultant.regist %>
+</p>
+
+
+<%= link_to 'Edit', edit_consultant_path(@consultant) %> |
+<%= link_to 'Back', consultants_path %>

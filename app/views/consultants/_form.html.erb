@@ -1,0 +1,65 @@
+<%= form_for(@consultant) do |f| %>
+  <% if @consultant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@consultant.errors.count, "error") %> prohibited this consultant from being saved:</h2>
+
+      <ul>
+      <% @consultant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.number_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :contents %><br />
+    <%= f.text_field :contents %>
+  </div>
+  <div class="field">
+    <%= f.label :site_name %><br />
+    <%= f.text_field :site_name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :person %><br />
+    <%= f.text_field :person %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :kinsyo %><br />
+    <%= f.text_field :kinsyo %>
+  </div>
+  <div class="field">
+    <%= f.label :rate %><br />
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
+    <%= f.label :info %><br />
+    <%= f.text_field :info %>
+  </div>
+  <div class="field">
+    <%= f.label :regist %><br />
+    <%= f.text_field :regist %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 
   def index
-    @boards = Board.where("stock_id IS NOT NULL")
+    @comments = Comment.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,18 +10,13 @@ class BoardsController < ApplicationController
   end
 
   def list
-    @boards = Board.where("stock_id IS NOT NULL")
+    @boards = Board.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @boards }
     end
   end
-
-  def index_consul
-    @boards = Board.where("stock_id IS NULL")
-  end
-
 
   # GET /boards/1
   # GET /boards/1.json
@@ -102,7 +97,7 @@ class BoardsController < ApplicationController
   end
   
   def post_comment
-    Board.find(params[:id]).comments.create(params[:comment])
+    Stock.find(params[:id]).comments.create(params[:comment])
     redirect_to :back
   end
 

@@ -4,7 +4,8 @@ class CreateComments < ActiveRecord::Migration
       t.string :sender
       t.string :contents
       t.integer :board_id
-
+      t.integer :stock_id
+      t.integer :comment_id
       t.timestamps
     end
   end

@@ -16,4 +16,7 @@ class PageController < ApplicationController
   def regulation
   end
 
+  def consultant
+  end
+
 end

@@ -1,5 +1,8 @@
 Kabudata::Application.routes.draw do
 
+  resources :consultants
+
+
   resources :toushikomon_boards
 
 
