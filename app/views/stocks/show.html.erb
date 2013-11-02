@@ -17,14 +17,14 @@
 		<article id="main" class="clearfix">
 
 			<div class="title-bar">
-				<h1>8515 ガンホーオンラインエンターテイメント</h1>
+				<h1>【<%= @stock.code %>】<%= @stock.name %></h1>
 			</div>
 
 			<div class="stock-state clearfix">
 
 				<dl class="clearfix">
 					<dt>市場</dt>
-					<dd><a href="./brand-list-content.html">JQ</a></dd>
+					<dd><a href="./brand-list-content.html"><%= @stock.market %></a></dd>
 					<dt>業種</dt>
 					<dd><a href="./brand-list-content.html">情報・通信</a></dd>
 				</dl>
@@ -53,7 +53,7 @@
 				<div>
 					<dl class="clearfix">
 						<dt>株価 <span>(15:00)</span></dt>
-						<dd class="today-price">1,236,000</dd>
+						<dd class="today-price"><%= @stock.price %></dd>
 						<dt>前日比</dt>
 						<dd class="up">+34,000(+2.83%)</dd>
 					</dl>
@@ -86,7 +86,7 @@
 			</div>
 
 			<section class="stock-rank clearfix">
-				<h2>8515  ガンホーオンラインエンターテイメント　ランキング</h2>
+				<h2>【<%= @stock.code %>】<%= @stock.name %>　ランキング</h2>
 				<ul>
 					<li>値上がり率<span>1位</span></li>
 					<li>値下がり率<span>---</span></li>
@@ -113,127 +113,52 @@
 				<section id="page1">
 
 					<div class="title-bar-sub">
-						<h2>8515  ガンホーオンラインエンターテイメント　株価予想</h2>
+						<h2>【<%= @stock.code %>】<%= @stock.name %>　株価予想</h2>
 						<p>全20件</p>
 					</div>
 
 					<ul class="content-list-box">
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
-						<li class="content-list clearfix">
-							<dl class="clearfix">
-								<dt>名無しさん</dt>
-								<dd>2013/06/18(金) 18:08</dd>
-							</dl>
-							<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。</p>
-							<ul>
-								<li class="good"><a href="./barnd.html">13</a></li>
-								<li class="bad"><a href="./barnd.html">9</a></li>
-								<li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
-							</ul>
-						</li>
+	          <% @stock.comments.each do |comment| %>
+	            <li class="stock-list-content clearfix">
+	              <dl class="clearfix">
+	                <dt><a href="./brand.html">【<%= @stock.code %>】<%= @stock.name %></a>の株価予想</dt>
+	                <dd><%= comment.sender %></dd>
+	                <dd><%= complete_time(comment.created_at) %></dd>
+	              </dl>
+	              <p><%= comment.contents %></p>
+	              <ul>
+	                <li class="good"><a href="./stock.html">13</a></li>
+	                <li class="bad"><a href="./stock.html">9</a></li>
+	                <li class="reply"><a href="#stock-write"><span>このレスに返信</span></a></li>
+	              </ul>
+	            </li>
+	          <% end %>
 					</ul>
 
 					<div id="stock-write" class="from-write">
 						<h3>株価予想に書き込みをする</h3>
-						<div class="clearfix">
-							<p>スパム対策の為、URLは"h"を抜いた"ttp"から入力してください。</p>
-							<form action="">
-								<dl class="clearfix">
-									<dt><label for="form-stock-name">お名前</label></dt>
-									<dd><input type="text" name="" id="form-stock-name" /></dd>
-									<dt><label for="form-stock-code">銘柄コード</label></dt>
-									<dd><input type="text" name="" value="8515" id="form-stock-code" /></dd>
-								</dl>
-								<p><textarea name=""></textarea></p>
-								<ul>
-									<li><input type="checkbox" /><a href="./kiyaku.html">利用規約</a>に同意して書き込む</li>
-									<li><input type="image" src="./img/button-form-write.png" value="書き込み" alt="書き込み" onMouseOver="this.src='./img/button-form-write-on.png'" onMouseOut="this.src='./img/button-form-write.png'" /></li>
-								</ul>
-							</form>
-						</div>
+		        <div class="clearfix">
+		          <p>スパム対策の為、URLは"h"を抜いた"ttp"から入力してください。</p>
+		          <% @comment = Comment.new %>
+		          <%= form_for(@comment) do |f| %>
+		            <dl class="clearfix">
+		              <dt><label for="form-stock-name">お名前</label></dt>
+		              <dd>
+		                <%= f.text_field :sender, class: "field_wide", id: "form-stock-name"  %>
+		              </dd>
+		              <%= f.hidden_field :stock_id, value: @stock.id %>
+		            </dl>
+		            <p>
+		               <%= f.text_area :contents, rows: "4", class: "field_wide" %>
+		            </p>
+		            <ul>
+		              <li><input type="checkbox" /><a href="./kiyaku.html">利用規約</a>に同意して書き込む</li>
+		              <li>
+		                <%= f.submit "投稿", class: "btn_primary" %>
+		              </li>
+		            </ul>
+		          <% end %>
+		        </div>
 
 					</div>
 
@@ -265,62 +190,7 @@
 								</dl>
 								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
 							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。今買えばスレ</p>
-							</li>
+
 						</ul>
 					</div>
 
@@ -334,62 +204,7 @@
 								</dl>
 								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
 							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
-							<li class="bbs-2ch-list clearfix">
-								<dl class="clearfix">
-									<dt>1.名無しさん</dt>
-									<dd>2013/06/18(金) 18:08</dd>
-									<dd>ID:rFNIv707</dd>
-								</dl>
-								<p>ガンホーは、今月末に1:10の株式分割を行う予定ですね。米では、パズドラが人気ということも嬉しいニュースですね。急騰急落スレ</p>
-							</li>
+
 						</ul>
 					</div>
 

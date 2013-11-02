@@ -2,10 +2,6 @@
 
 one:
   sender: MyString
-  contents: MyString
-  board_id: 1
 
 two:
   sender: MyString
-  contents: MyString
-  board_id: 1

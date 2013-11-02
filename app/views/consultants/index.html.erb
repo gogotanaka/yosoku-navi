@@ -36,7 +36,7 @@
                     <h2>あ行の株用語</h2>
                     <ul>
                         <% Consultant.where(category: i).each do |consultant| %>
-                          <li><%= link_to consultant.name, consultant_path(consultant) %></li>
+                          <li><%= link_to consultant.title, consultant_path(consultant) %></li>
                         <% end %>
                     </ul>
                 </section>

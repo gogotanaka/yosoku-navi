@@ -60,7 +60,7 @@
         <div class="clearfix">
           <p>スパム対策の為、URLは"h"を抜いた"ttp"から入力してください。</p>
           <% @comment = Comment.new %>
-          <%= form_for(@comment, url: post_comment_board_path(1)) do |f| %>
+          <%= form_for(@comment) do |f| %>
             <dl class="clearfix">
               <dt><label for="form-stock-name">お名前</label></dt>
               <dd>

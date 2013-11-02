@@ -3,7 +3,7 @@ class CreateConsultants < ActiveRecord::Migration
     create_table :consultants do |t|
       t.string :title
       t.integer :category
-      t.string :contents
+      t.text :contents
       t.string :site_name
       t.string :url
       t.string :place
