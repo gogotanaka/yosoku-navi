@@ -18,19 +18,7 @@
           <% end %>
         </div>
         <div class="new_comment_container">
-          <h3>投稿する</h3>
-          <% @comment = Comment.new %>
-          <%= form_for(@comment, url: post_comment_board_path(@board.id)) do |f| %>
-            <div class="field_block">
-              <div class="field_label">名前</div>
-              <%= f.text_field :sender, class: "field_wide" %>
-            </div>
-            <div class="field_block">
-              <div class="field_label">内容</div>
-              <%= f.text_area :contents, rows: "4", class: "field_wide" %>
-            </div>
-            <%= f.submit "投稿", class: "btn_primary" %>
-          <% end %>
+
         </div>
       </div>
       <div class="after_second_comments">
