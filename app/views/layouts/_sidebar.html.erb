@@ -25,33 +25,18 @@
 	<section class="rank-box">
 		<h3><img src="/img/sidebar-toushikomon-rank.png" alt="投資顧問ランキングTOP3" /></h3>
 		<dl>
-			<dt class="rank-1"><a href="" target="_blank">株マイスター</a></dt>
-			<dd class="clearfix">
-				<a href="" target="_blank"><img src="/img/thumbnail.png" alt="株マイスター" /></a>
-				<ul>
-					<li><span>登録</span>：完全無料</li>
-					<li><span>無料情報</span>：あり</li>
-					<li><span>収益率</span>：180%</li>
-				</ul>
-			</dd>
-			<dt class="rank-2"><a href="" target="_blank">株マイスター</a></dt>
-			<dd class="clearfix">
-				<a href="" target="_blank"><img src="/img/thumbnail.png" alt="株マイスター" /></a>
-				<ul>
-					<li><span>登録</span>：完全無料</li>
-					<li><span>無料情報</span>：あり</li>
-					<li><span>収益率</span>：180%</li>
-				</ul>
-			</dd>
-			<dt class="rank-3"><a href="" target="_blank">株マイスター</a></dt>
-			<dd class="clearfix">
-				<a href="" target="_blank"><img src="/img/thumbnail.png" alt="株マイスター" /></a>
-				<ul>
-					<li><span>登録</span>：完全無料</li>
-					<li><span>無料情報</span>：あり</li>
-					<li><span>収益率</span>：180%</li>
-				</ul>
-			</dd>
+			<% Consultant.all.each do |consultant| %>
+				<dt class="rank-1"><%= link_to consultant.title, consultant_path(consultant) %></dt>
+				<dd class="clearfix">
+					<a href="" target="_blank"><img src="/img/thumbnail.png" alt="株マイスター" /></a>
+					<ul>
+						<li><span>登録</span>：完全無料</li>
+						<li><span>無料情報</span>：あり</li>
+						<li><span>収益率</span>：180%</li>
+					</ul>
+				</dd>
+			<% end %>
+
 		</dl>
 	</section>
 
@@ -63,29 +48,17 @@
 		</ul>
 
 		<dl id="tab1on" class="content">
-			<dt class="rank-1"><a href="./brand.html">ガンホー・オンラインエンターテイメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-2"><a href="./brand.html">ガンホー・オンラインエンターテイメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-3"><a href="./brand.html">ガンホー・オンラインエンターテイメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-4"><a href="./brand.html">ガンホー・オンラインエンターテイメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-5"><a href="./brand.html">ガンホー・オンラインエンターテイメント</a></dt>
-			<dd>口コミ数：200件</dd>
+			<% Stock.all.each do |stock| %>
+				<dt class="rank-1"><%= link_to stock.name, stock_path(stock) %></dt>
+				<dd>口コミ数：<%= stock.comments.count %>件</dd>
+			<% end %>
 		</dl>
 
 		<dl id="tab2on" class="content">
-			<dt class="rank-1"><a href="./toushikomon.html">アイリンクインベストメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-2"><a href="./toushikomon.html">アイリンクインベストメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-3"><a href="./toushikomon.html">アイリンクインベストメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-4"><a href="./toushikomon.html">アイリンクインベストメント</a></dt>
-			<dd>口コミ数：200件</dd>
-			<dt class="rank-5"><a href="./toushikomon.html">アイリンクインベストメント</a></dt>
-			<dd>口コミ数：200件</dd>
+			<% Consultant.all.each do |consultant| %>
+				<dt class="rank-1"><%= link_to consultant.title, consultant_path(consultant) %></dt>
+				<dd>口コミ数：<%= consultant.comments.count %>件</dd>
+			<% end %>
 		</dl>
 
 	</section>
@@ -94,18 +67,12 @@
 		<h3><img src="/img/sidebar-archive-new.png" alt="新着！仕手株速報" /></h3>
 		<div>
 			<dl>
-				<dt>2013/06/18</dt>
-				<dd><a href="./sitekabu.html">ガンホー・オンラインエンターテイメントが仕手筋に狙われる</a></dd>
-				<dt>2013/06/18</dt>
-				<dd><a href="./sitekabu.html">ガンホー・オンラインエンターテイメントが仕手筋に狙われる</a></dd>
-				<dt>2013/06/18</dt>
-				<dd><a href="./sitekabu.html">ガンホー・オンラインエンターテイメントが仕手筋に狙われる</a></dd>
-				<dt>2013/06/18</dt>
-				<dd><a href="./sitekabu.html">ガンホー・オンラインエンターテイメントが仕手筋に狙われる</a></dd>
-				<dt>2013/06/18</dt>
-				<dd><a href="./sitekabu.html">ガンホー・オンラインエンターテイメントが仕手筋に狙われる</a></dd>
+		    <% Piece.order("created_at DESC").limit(5).each do |piece| %>
+		    	<dt><%= complete_date(piece.updated_at + 32400) %></dt>
+					<dd><%= link_to piece.title, piece_path(piece.id) %></dd>
+		    <% end %>
 			</dl>
-			<p><a href="./sitekabu-list.html">&gt;&gt;仕手株速報一覧へ</a></p>
+			<p><%= link_to "仕手株速報一覧へ", piece_index_path %></p>
 		</div>
 	</section>
 

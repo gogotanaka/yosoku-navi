@@ -29,3 +29,9 @@ gem 'capistrano', "2.15.5"
 gem 'feedzirra'
 
 gem 'sitemap_generator'
+
+gem 'will_paginate', '~> 3.0'
+
+gem 'pry'
+gem 'pry-doc'
+gem 'pry-rails'

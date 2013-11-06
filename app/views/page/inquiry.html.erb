@@ -1,21 +1,43 @@
-<%= image_tag('inquiry_bar.jpg')%>
-<div class="inquiry">
-  <div class="detail">
-    <p>広告掲載に関して、情報の投稿方法、ブログランキングの参加方法など、ご不明な点はお気軽にお問い合わせ下さい。</p>
-    <p>※当サイトは投資顧問業では御座いませんので、掲載情報の正否確認や銘柄の個別相談には返答できません。</p>
-    <p>ご了承願います。</p>
-  </div>
-  <%= form_for @inquiry, url: {action: 'inquiry_create'} do |f| %>
-    <table class="inquiry_table">
-      <tr>
-        <td class="colum">メールアドレス</td>
-        <td><%= f.text_field :address, size: 60 %></td>
-      </tr>
-      <tr class="text">
-        <td class="colum">お問い合わせ内容</td>
-        <td><%= f.text_area :content, size: "60x20" %></td>
-      </tr>
-    </table>
-    <%= f.submit "お問い合わせ送信", class: "submit" %>
-  <% end %>
+<div id="pan-navi" class="clearfix">
+  <ol>
+    <li class="arrow"><a href="./index.html">HOME</a></li>
+    <li><strong>お問い合わせ</strong></li>
+  </ol>
 </div>
+<!--//pan-navi-->
+
+<!--content-->
+<div id="content" class="clearfix">
+
+  <!--content-box-->
+  <div id="content-box" class="clearfix">
+
+    <!--main-->
+    <div id="main" class="clearfix">
+      <div class="title-bar">
+        <h1>お問い合わせ</h1>
+      </div>
+
+      <div class="contact-form">
+        <p>ご意見・ご質問のある方は、下記項目を入力し送信ボタンをクリックしてください。</p>
+
+        <%= form_for @inquiry, url: {action: 'inquiry_create'} do |f| %>
+          <dl>
+            <dt><label for="contact-name">お名前</label></dt>
+            <dd><input type="text" name="" id="contact-name" /></dd>
+            <dt>メールアドレス</dt>
+            <dd><%= f.text_field :address, size: 60, id: "contact-mail" %></dd>
+            <dt><label for="contact-content">内容</label></dt>
+            <dd><%= f.text_area :content, size: "60x20", id: "contact-content" %></dd>
+          </dl>
+          <p>
+            <%= f.submit "お問い合わせ送信", class: "submit" %>
+          </p>
+        <% end %>
+      </div>
+
+    </div>
+    <!--//main-->
+
+
+

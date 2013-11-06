@@ -1,5 +1,8 @@
 Kabudata::Application.routes.draw do
 
+  resources :blogs
+
+
   resources :comments
 
 
@@ -52,6 +55,12 @@ Kabudata::Application.routes.draw do
   get "page/inquiry"
   get "page/rise"
   get "page/index"
+
+  get "page/inquiry"
+  get "page/kiyaku"
+  get "page/about"
+  get "page/menseki"
+  get "page/sitemap"
 
   get "page/sitemap"
   post "page/register_address"

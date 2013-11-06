@@ -1,47 +1,45 @@
-<div class="new_blog_container">
-  <div class="new_blog_top">
-    <div class="new_blog_container">
-      
-        <div class="field_block">
-          <div class="field_label">タイトル</div>
-          <%= @blog.title %>
-        </div>
-        <div class="field_block">
-          <div class="field_label">URL</div>
-          <%= @blog.url %>
-        </div>
-        <div class="field_block">
-          <div class="field_label">RSS</div>
-          <%= @blog.rss %>
-        </div>
-        <div class="field_block">
-          <div class="field_label">説明</div>
-          <%= @blog.describe %>
-        </div>
-        <div class="field_block">
-          <div class="field_label">今日のイン</div>
-          <%= @blog.ins.count %>
-        </div>
-        <div class="field_block">
-          <div class="field_label">過去一週間のイン</div>
-          <%= week_count(@blog.blog_counts.where('created_at >=?', Time.now - 604800).pluck(:view) || []) %>
-        </div>
-        <div class="field_block">
-          <div class="field_label">通算イン</div>
-          <%= @blog.in %>
-        </div>
-    <% url = "http://localhost:3000/blogs/"+ @blog.id.to_s + "/count_in" %>
-    <% s = (link_to image_tag("http://tousijyohou.jp/assets/banner_large.jpg", alt: '株に関する全ての情報を全て収集！完全無料で全て公開します。気になる銘柄、注目の銘柄、噂の銘柄に関する今後の動きも口コミ情報交換掲示板でチェックできます。'), url) %>
-    <%= s %>
-    <textarea cols="40" rows="6"><%= CGI::unescape(s) %></textarea>
+<p id="notice"><%= notice %></p>
 
-    <% @blog.entries.each do |entry| %>
-      <%= entry.title %><br>
-    <% end %>
-</div>
+<p>
+  <b>Url:</b>
+  <%= @blog.url %>
+</p>
 
-  </div>
-</div>
-  
+<p>
+  <b>Title:</b>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <b>Describe:</b>
+  <%= @blog.describe %>
+</p>
+
+<p>
+  <b>In:</b>
+  <%= @blog.in %>
+</p>
+
+<p>
+  <b>Out:</b>
+  <%= @blog.out %>
+</p>
+
+<p>
+  <b>Week in:</b>
+  <%= @blog.week_in %>
+</p>
+
+<p>
+  <b>Month in:</b>
+  <%= @blog.month_in %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @blog.image %>
+</p>
 
 
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>

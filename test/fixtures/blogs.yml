@@ -4,8 +4,18 @@ one:
   url: MyString
   title: MyString
   describe: MyString
+  in: 1
+  out: 1
+  week_in: 1
+  month_in: 1
+  image: MyString
 
 two:
   url: MyString
   title: MyString
   describe: MyString
+  in: 1
+  out: 1
+  week_in: 1
+  month_in: 1
+  image: MyString

@@ -1,6 +1,3 @@
-require 'feedzirra'
-require 'nokogiri'
-require 'open-uri'
 class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
@@ -17,6 +14,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @blog = Blog.find(params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @blog }
@@ -26,15 +24,8 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   # GET /blogs/new.json
   def new
-    
-    begin
-      page = open(params[:url])
-    rescue OpenURI::HTTPError
-      return
-    end
-    html = Nokogiri::HTML(page.read)
-    @blog = Blog.new(url: params[:url], title: html.css('title')[0].content, describe: html.css('meta').select{|x| x[:name] == "description" || x[:name] == "Description"}[0][:content])
-    
+    @blog = Blog.new
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @blog }
@@ -89,23 +80,4 @@ class BlogsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def count_in
-    ip = request.env["HTTP_X_FORWARDED_FOR"] || request.remote_ip
-    blog = Blog.find(params[:id])
-    unless blog.ins.find_by_ip(ip)
-      blog.ins.create(ip: ip)
-      blog.in = blog.in + 1
-      blog.save
-    end
-    redirect_to blog_path(blog)
-  end
-
-  def out
-    blog = Blog.find(params[:id])
-    blog.out = blog.out + 1
-    blog.save
-    redirect_to blog.url
-  end
-
 end

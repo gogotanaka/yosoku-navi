@@ -41,6 +41,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
     chronic (0.10.2)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -72,6 +73,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     marc (0.7.1)
+    method_source (0.8.2)
     mime-types (1.25)
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
@@ -91,6 +93,15 @@ GEM
       marc
     pg (0.17.0)
     polyglot (0.3.3)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-doc (0.4.6)
+      pry (>= 0.9)
+      yard (>= 0.8)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -126,6 +137,7 @@ GEM
       nokogiri (~> 1.6.0)
     sitemap_generator (4.2.0)
       builder
+    slop (3.4.6)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -149,6 +161,8 @@ GEM
     whenever (0.8.4)
       activesupport (>= 2.3.4)
       chronic (>= 0.6.3)
+    will_paginate (3.0.5)
+    yard (0.8.7.3)
 
 PLATFORMS
   ruby
@@ -163,6 +177,9 @@ DEPENDENCIES
   nokogiri
   openurl
   pg
+  pry
+  pry-doc
+  pry-rails
   rails (= 3.2.13)
   sass-rails (= 3.2.5)
   sitemap_generator
@@ -170,3 +187,4 @@ DEPENDENCIES
   uglifier (= 1.2.3)
   unicorn
   whenever
+  will_paginate (~> 3.0)

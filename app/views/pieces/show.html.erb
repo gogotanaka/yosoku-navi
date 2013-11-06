@@ -51,16 +51,10 @@
 		<h2>新着！仕手株速報</h2>
 
 		<dl class="clearfix">
-			<dt>2013/06/18</dt>
-			<dd><a href="./sitekabu.html">ガンホーオンラインエンターテイメントが仕手筋に狙われる</a></dd>
-			<dt>2013/06/18</dt>
-			<dd><a href="./sitekabu.html">ガンホーオンラインエンターテイメントが仕手筋に狙われる</a></dd>
-			<dt>2013/06/18</dt>
-			<dd><a href="./sitekabu.html">ガンホーオンラインエンターテイメントが仕手筋に狙われる</a></dd>
-			<dt>2013/06/18</dt>
-			<dd><a href="./sitekabu.html">ガンホーオンラインエンターテイメントが仕手筋に狙われる</a></dd>
-			<dt>2013/06/18</dt>
-			<dd><a href="./sitekabu.html">ガンホーオンラインエンターテイメントが仕手筋に狙われる</a></dd>
+	    <% Piece.order("created_at DESC").limit(5).each do |piece| %>
+	    	<dt><%= complete_date(piece.updated_at + 32400) %></dt>
+				<dd><%= link_to piece.title, piece_path(piece.id) %></dd>
+	    <% end %>
 		</dl>
 
 		<p>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131102084537) do
+ActiveRecord::Schema.define(:version => 20131103113555) do
 
   create_table "beginners", :force => true do |t|
     t.string   "title"
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(:version => 20131102084537) do
     t.integer  "week_in",    :default => 0
     t.integer  "month_in",   :default => 0
     t.string   "image"
+    t.string   "rss"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
-    t.string   "rss"
   end
 
   create_table "boards", :force => true do |t|

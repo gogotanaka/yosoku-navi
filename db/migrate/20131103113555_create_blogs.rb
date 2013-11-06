@@ -9,6 +9,7 @@ class CreateBlogs < ActiveRecord::Migration
       t.integer :week_in, default: 0
       t.integer :month_in, default: 0
       t.string :image
+      t.string :rss
       t.timestamps
     end
   end
