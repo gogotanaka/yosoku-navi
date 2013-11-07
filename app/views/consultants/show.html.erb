@@ -3,8 +3,8 @@
 <!--pan-navi-->
 <div id="pan-navi" class="clearfix">
     <ol>
-        <li class="arrow"><a href="./index.html">HOME</a></li>
-        <li class="arrow"><a href="./toushikomon-list.html">投資顧問一覧</a></li>
+        <li class="arrow"><%= link_to "HOME", root_path %></li>
+        <li class="arrow"><%= link_to "投資顧問一覧", consultants_path %></li>
         <li><strong><%= @consultant.title %></strong></li>
     </ol>
 </div>
