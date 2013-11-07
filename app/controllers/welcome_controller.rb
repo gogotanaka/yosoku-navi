@@ -5,7 +5,10 @@ def get_content(html, tag, className, index, childPath=nil)
 end
 class WelcomeController < ApplicationController
 	def index
-    @stocks = Stock.all
+    sort_by = params[:sort_by]
+    order = params[:order]
+    @stocks = Stock.order("#{sort_by} #{order}").paginate(:page => params[:page], :per_page => 30)
+    @page = params[:page]
     #@codes = Stock.convert("http://info.finance.yahoo.co.jp/ranking/?kd=56&mk=1").css("tr.rankingTabledata").map{|x| x.css("td")[1].content }[0..10]
     @summary = Summary.all
     @news = News.order("updated_at ASC")

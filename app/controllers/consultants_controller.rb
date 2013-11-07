@@ -80,4 +80,9 @@ class ConsultantsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def seach
+    word = params[:word]
+    @consultants = Consultant.where("name LIKE :word", word: "%#{word}%").paginate(:page => params[:page], :per_page => 30)
+  end
 end
