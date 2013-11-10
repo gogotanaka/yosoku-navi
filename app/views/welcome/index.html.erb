@@ -105,13 +105,25 @@
 								<td>
 									<%= stock.price %>
 								</td>
-								<td><span class="up">+12,000<br />(+0.96%)</span></td>
+								<td><%= compare(stock.previousprice, stock.price) %><br /></td>
 								<td>
 									<%= stock.volume %>
 								</td>
-								<td><span class="down">-8,908<br />(-4.19倍)</span></td>
-								<td>30,367<br /><span class="down">(-6,352倍)</span></td>
-								<td>0<br /><span>(0倍)</span></td>
+								<td><%= compare(stock.previousvolume, stock.volume) %><br />
+									<% if false %>
+										(-4.19倍)
+									<% end %>
+								</td>
+								<td><%= stock.margin_buying %><br />
+									<% if false %>
+										<span class="down">(-6,352倍)</span>
+									<% end %>
+								</td>
+								<td><%= stock.margin_selling %><br />
+									<% if false %>
+										<span>(0倍)</span>
+									<% end %>
+								</td>
 								<td class="corners gradation"><a href="./brand.html#page2">105</a></td>
 								<td class="corners gradation"><a href="./brand.html#page3">65</a></td>
 							</tr>
