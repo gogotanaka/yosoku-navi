@@ -25,7 +25,7 @@
           <% @comments.each do |comment| %>
             <li class="stock-list-content clearfix">
               <dl class="clearfix">
-                <dt><a href="./brand.html">【3765】ガンホー・オンライン・エンタテイメント</a>の株価予想</dt>
+                <dt><%= link_to comment.stock.name, stock_path(comment.stock) %></dt>
                 <dd><%= comment.sender %></dd>
                 <dd><%= complete_time(comment.created_at) %></dd>
               </dl>
@@ -38,21 +38,7 @@
             </li>
           <% end %>
         </ul>
-
-        <ul class="pn-navi clearfix">
-          <li><a href="./stock.html">&lt;&lt;前へ</a></li>
-          <li class="current"><span>1</span></li>
-          <li class="number"><a href="./stock.html">2</a></li>
-          <li class="number"><a href="./stock.html">3</a></li>
-          <li class="number"><a href="./stock.html">4</a></li>
-          <li class="number"><a href="./stock.html">5</a></li>
-          <li class="number"><a href="./stock.html">6</a></li>
-          <li class="number"><a href="./stock.html">7</a></li>
-          <li class="number"><a href="./stock.html">8</a></li>
-          <li class="number"><a href="./stock.html">9</a></li>
-          <li><a href="./stock.html">次へ&gt;&gt;</a></li>
-        </ul>
-
+        <%= will_paginate(@comments, :prev_label=>'&#171;前', :next_label=>'次&#187;') %>
       </section>
 
       <div id="stock-write" class="from-write">

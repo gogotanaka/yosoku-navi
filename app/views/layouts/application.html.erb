@@ -30,10 +30,12 @@
 			<p><a href="./index.html"><img src="/img/logo.png" alt="株価予想NAVI" /></a></p>
 
 			<div class="mail-box">
-				<form action="" class="clearfix">
-					<input type="text" value="メールアドレスを入力していください。" id="mail" />
-					<input type="image" src="/img/botton-mail.png" alt="注目銘柄を受け取る" />
-				</form>
+        <% @report = Report.new %>
+        <%= form_for(@report) do |f| %>
+          <%= f.hidden_field :report_type, value: 3 %>
+					<%= f.text_field :contents, id: "mail" %>
+					<%= f.submit %>
+				<% end %>
 			</div>
 
 		</header>

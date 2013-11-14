@@ -33,7 +33,7 @@
             </ul>
             <% 10.times do |i| %>
                 <section  id="toushikomon-1" class="toushikomon-list clearfix">
-                    <h2>あ行の株用語</h2>
+                    <h2><%= ["あ","か","さ","た","な","は","ま","や","ら","わ"][i] %>行の株用語</h2>
                     <ul>
                         <% Consultant.where(category: i).each do |consultant| %>
                           <li><%= link_to consultant.title, consultant_path(consultant) %></li>
