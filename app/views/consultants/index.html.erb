@@ -1,6 +1,6 @@
 <div id="pan-navi" class="clearfix">
     <ol>
-        <li class="arrow"><a href="./index.html">HOME</a></li>
+        <li class="arrow"><%= link_to "HOME", root_path %></li>
         <li><strong>投資顧問一覧</strong></li>
     </ol>
 </div>
@@ -33,7 +33,7 @@
             </ul>
             <% 10.times do |i| %>
                 <section  id="toushikomon-1" class="toushikomon-list clearfix">
-                    <h2>あ行の株用語</h2>
+                    <h2><%= ["あ","か","さ","た","な","は","ま","や","ら","わ"][i] %>行の株用語</h2>
                     <ul>
                         <% Consultant.where(category: i).each do |consultant| %>
                           <li><%= link_to consultant.title, consultant_path(consultant) %></li>

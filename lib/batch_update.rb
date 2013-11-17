@@ -48,21 +48,29 @@ class BatchUpdate
     35.times do |j|
       id = j + 1
       i = 1
-      self.convert("http://106.187.54.79/stock/#{id}?span=120").css("table tr").each do |x|
-        unless i == 1
-          td = x.css("td")
-          stock = Stock.find_by_code(td[0].text.to_i)
-          stock.update_attributes(
-            price: td[3].text,
-            previousprice: td[4].text,
-            volume: td[5].text,
-            opening: td[7].text,
-            high: td[8].text,
-            low: td[9].text,
-            chart: td[10].text,
-            industry: td[14].text
-            )
-          stock.save
+      convert("http://106.187.54.79/stock/#{id}?span=120").css("table tr").each do |tr|
+        begin
+          unless i == 1
+            tds = tr.css("td")
+            stock = Stock.find_by_code(tds[0].text.to_i)
+            stock.update_attributes(
+              price:           tds[3].text,
+              previousprice:   tds[4].text,
+              volume:          tds[5].text,
+              opening:         tds[7].text,
+              high:            tds[8].text,
+              low:             tds[9].text,
+              chart:           tds[10].text,
+              industry:        tds[14].text,
+              previousvolume:  0,
+              margin_buying:   tds[15].text,
+              margin_selling:  tds[16].text,
+              d_margin_buying: tds[17].text,
+              d_margin_selling:tds[18].text, 
+              )
+            stock.save
+          end
+        rescue
         end
         i += 1
       end
@@ -78,16 +86,9 @@ class BatchUpdate
         date = html.css('div.innerDate dd').map{|x| x.css('strong').inner_text }
       
         @stock = Stock.new(
-          previousprice: date[0],
-          opening: date[1],
-          high: date[2],
-          low: date[3],
-          volume: date[4],
-          price: html.css('table.stocksTable td.stoksPrice')[1].content,
           name: html.css('table.stocksTable th.symbol h1').inner_text,
           code: x,
           market: html.css('div.stocksDtlWp dd')[0].content,
-          chart: html.css("div.styleChart img")[0][:src]
           )
         @stock.save
       end

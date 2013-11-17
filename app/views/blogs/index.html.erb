@@ -1,6 +1,6 @@
 <div id="pan-navi" class="clearfix">
     <ol>
-        <li class="arrow"><a href="./index.html">HOME</a></li>
+        <li class="arrow"><%= link_to "HOME", root_path %></li>
         <li><strong>投資家ブログランキング</strong></li>
     </ol>
 </div>
@@ -48,21 +48,7 @@
                     </tbody>
 
                 </table>
-
-                <ul class="pn-navi clearfix">
-                    <li><a href="./blog-rank-investor.html">&lt;&lt;前へ</a></li>
-                    <li class="current"><span>1</span></li>
-                    <li class="number"><a href="./blog-rank-investor.html">2</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">3</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">4</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">5</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">6</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">7</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">8</a></li>
-                    <li class="number"><a href="./blog-rank-investor.html">9</a></li>
-                    <li><a href=./blog-rank-investor.html"">次へ&gt;&gt;</a></li>
-                </ul>
-
+                <%= will_paginate(@blogs, :prev_label=>'&#171;前', :next_label=>'次&#187;') %>
             </section>
 
             <section>
@@ -78,16 +64,21 @@
                             <dt class="image-link">イメージリンク</dt>
                             <dd><input type="text" name="" value="&lt;a href=&quot;http://株価予想.jpn.ocm/&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;画像URL&quot; /&gt;&lt;/a&gt;" /></dd>
                         </dl>
-
-                        <form action="">
+                        <% @report = Report.new %>
+                        <%= form_for(@report) do |f| %>
                             <h3>リンク反映方法</h3>
                             <p>リンクの設置が完了致しましたら、お手数でございますが下記のフォームより当サイトのURLを入力してリンクの設置報告を宜しくお願い致します。</p>
                             <dl class="link-reflection clearfix">
                                 <dt><label for="form-rank-url">URL</label></dt>
-                                <dd><input type="text" name="" id="form-rank-url" /></dd>
-                                <dd><input type="image" src="./img/button-report.png" value="報告する" alt="報告する" onMouseOver="this.src='./img/button-report-on.png'" onMouseOut="this.src='./img/button-report.png'" /></dd>
+                                <dd><%= f.text_field :contents, id: "form-rank-url" %></dd>
+                                <dd><%= f.hidden_field :report_type, value: 1 %></dd>
+                                <dd>
+                                    <%= f.submit %>
+
+                                    <input type="image" src="./img/button-report.png" value="報告する" alt="報告する" onMouseOver="this.src='./img/button-report-on.png'" onMouseOut="this.src='./img/button-report.png'" />
+                                </dd>
                             </dl>
-                        </form>
+                        <% end %>
 
                         <p>※リンク設置後、下記ツールで『OK』がでればリンク設置に関して問題ありません。</p>
                     </div>

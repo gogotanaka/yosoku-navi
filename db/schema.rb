@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131103113555) do
+ActiveRecord::Schema.define(:version => 20131114172853) do
 
   create_table "beginners", :force => true do |t|
     t.string   "title"
@@ -122,6 +122,13 @@ ActiveRecord::Schema.define(:version => 20131103113555) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "reports", :force => true do |t|
+    t.text     "contents"
+    t.integer  "report_type"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "stocks", :force => true do |t|
     t.integer  "code"
     t.string   "name"
@@ -135,8 +142,12 @@ ActiveRecord::Schema.define(:version => 20131103113555) do
     t.string   "low"
     t.string   "chart"
     t.string   "industry"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "margin_buying"
+    t.string   "margin_selling"
+    t.string   "d_margin_buying"
+    t.string   "d_margin_selling"
   end
 
   add_index "stocks", ["code"], :name => "index_stocks_on_code"

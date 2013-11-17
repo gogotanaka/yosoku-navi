@@ -2,7 +2,7 @@ class ToushikomonBoardsController < ApplicationController
   # GET /toushikomon_boards
   # GET /toushikomon_boards.json
   def index
-    @toushikomon_boards = ToushikomonBoard.all
+    @comments = Comment.where("consultant_id IS NOT ?", nil).paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

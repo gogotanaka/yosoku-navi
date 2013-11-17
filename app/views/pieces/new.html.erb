@@ -1,5 +1,28 @@
+
+
+<%= auto_discovery_link_tag(:rss, "http://iblog.com") %>
+
+<!--line-->
+<div id="pan-navi" class="clearfix">
+  <ol>
+    <li class="arrow"><%= link_to "HOME", root_path %></li>
+    <li><strong>仕手株速報</strong></li>
+  </ol>
+</div>
+
+<div id="content" class="clearfix">
+  <div id="content-box" class="clearfix">
+
+
+<article id="main" class="clearfix">
+
+  <div class="title-bar">
+    <h1><img src="./img/title-bar-sitekabu-list.png" alt="仕手株速報" /></h1>
+  </div>
 <h1>New piece</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', pieces_path %>
+
+</article>

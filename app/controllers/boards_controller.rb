@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 
   def index
-    @comments = Comment.all
+    @comments = Comment.where("stock_id IS NOT NULL").paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

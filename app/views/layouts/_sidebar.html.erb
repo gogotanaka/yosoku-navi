@@ -7,19 +7,17 @@
 	<section class="search-box">
 		<h3><img src="/img/sidebar-brand-serach.png" alt="銘柄検索" /></h3>
 		<p>銘柄名と銘柄コードで検索ができます。</p>
-		<form action="">
-			<input type="text" name="" />
-			<input type="image" name="" src="/img/button-search.png" value="検索" alt="検索" onMouseOver="this.src='./img/button-search-on.png'" onMouseOut="this.src='./img/button-search.png'" />
-		</form>
+		<%= form_tag search_stocks_path do %>
+		  <%= text_field_tag :word, "" %>
+		<% end %>
 	</section>
 	
 	<section class="search-box">
 		<h3><img src="/img/sidebar-toushikomon-serach.png" alt="投資顧問検索" /></h3>
 		<p>投資顧問名を検索できます。</p>
-		<form action="">
-			<input type="text" name="" />
-			<input type="image" name="" src="/img/button-search.png" value="検索" alt="検索" onMouseOver="this.src='./img/button-search-on.png'" onMouseOut="this.src='./img/button-search.png'" />
-		</form>
+		<%= form_tag search_consultants_path do %>
+		  <%= text_field_tag :word, "" %>
+		<% end %>
 	</section>
 
 	<section class="rank-box">
@@ -48,15 +46,15 @@
 		</ul>
 
 		<dl id="tab1on" class="content">
-			<% Stock.all.each do |stock| %>
-				<dt class="rank-1"><%= link_to stock.name, stock_path(stock) %></dt>
+			<% Stock.limit(5).each.with_index(1) do |stock, i| %>
+				<dt class="rank-<%= i %>"><%= link_to stock.name, stock_path(stock) %></dt>
 				<dd>口コミ数：<%= stock.comments.count %>件</dd>
 			<% end %>
 		</dl>
 
 		<dl id="tab2on" class="content">
-			<% Consultant.all.each do |consultant| %>
-				<dt class="rank-1"><%= link_to consultant.title, consultant_path(consultant) %></dt>
+			<% Consultant.all.each.with_index(1) do |consultant, i| %>
+				<dt class="rank-<%= i %>"><%= link_to consultant.title, consultant_path(consultant) %></dt>
 				<dd>口コミ数：<%= consultant.comments.count %>件</dd>
 			<% end %>
 		</dl>

@@ -5,7 +5,7 @@
 <!--line-->
 <div id="pan-navi" class="clearfix">
   <ol>
-    <li class="arrow"><a href="./index.html">HOME</a></li>
+    <li class="arrow"><%= link_to "HOME", root_path %></li>
     <li><strong>仕手株速報</strong></li>
   </ol>
 </div>
@@ -37,18 +37,5 @@
     <% end %>
   </ul>
 
-  <ul class="pn-navi clearfix">
-    <li><a href="./sitekabu-list.html">&lt;&lt;前へ</a></li>
-    <li class="current"><span>1</span></li>
-    <li class="number"><a href="./sitekabu-list.html">2</a></li>
-    <li class="number"><a href="./sitekabu-list.html">3</a></li>
-    <li class="number"><a href="./sitekabu-list.html">4</a></li>
-    <li class="number"><a href="./sitekabu-list.html">5</a></li>
-    <li class="number"><a href="./sitekabu-list.html">6</a></li>
-    <li class="number"><a href="./sitekabu-list.html">7</a></li>
-    <li class="number"><a href="./sitekabu-list.html">8</a></li>
-    <li class="number"><a href="./sitekabu-list.html">9</a></li>
-    <li><a href="./sitekabu-list.html">次へ&gt;&gt;</a></li>
-  </ul>
-
+  <%= will_paginate(@pieces, :prev_label=>'&#171;前', :next_label=>'次&#187;') %>
 </article>

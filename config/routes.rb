@@ -1,12 +1,19 @@
 Kabudata::Application.routes.draw do
 
+  resources :reports
+
+
   resources :blogs
 
 
   resources :comments
 
 
-  resources :consultants
+  resources :consultants do
+    collection do
+      post :search
+    end
+  end
 
 
   resources :toushikomon_boards
@@ -15,7 +22,11 @@ Kabudata::Application.routes.draw do
   resources :pieces
 
 
-  resources :stocks
+  resources :stocks do
+    collection do
+      post :search
+    end
+  end
 
 
   resources :toushikomons
@@ -28,6 +39,7 @@ Kabudata::Application.routes.draw do
 
 
   resources :stock
+
   resources :piece
 
   resources :blogs do
