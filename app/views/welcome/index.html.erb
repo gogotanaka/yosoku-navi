@@ -76,23 +76,7 @@
 						</tr>
 					</thead>
 					<tbody>
-
-						<tr>
-							<td>1</td>
-							<td>8515</td>
-							<td class="brand-name"><a href="./brand.html">ガンホーオンラインエンターテイメント</a></td>
-							<td>JQ</td>
-							<td>1,262,000</td>
-							<td><span class="up">+12,000<br />(+0.96%)</span></td>
-							<td>27,508</td>
-							<td><span class="down">-8,908<br />(-4.19倍)</span></td>
-							<td>30,367<br /><span class="down">(-6,352倍)</span></td>
-							<td>0<br /><span>(0倍)</span></td>
-							<td class="corners gradation"><a href="./brand.html#page2">105</a></td>
-							<td class="corners gradation"><a href="./brand.html#page3">65</a></td>
-						</tr>
-
-						<% @stocks.each do |stock| %>
+						<% @stocks[0..100].each do |stock| %>
 							<tr>
 								<td>1</td>
 								<td><%= stock.code %></td>
