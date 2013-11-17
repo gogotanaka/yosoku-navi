@@ -21,17 +21,17 @@
 #set :output, 'log/cron.log'
 set :output, 'log/cron.log'
 set :environment, :development
-every 30.minute do
+every 30.minute, roles: [:whenever] do
   runner "BatchUpdate.updater"
 end
 
-every 15.minute do
+every 15.minute, roles: [:whenever] do
 	runner "BatchUpdate.summary"
 end
-every 15.minute do
+every 15.minute, roles: [:whenever] do
 	runner "BatchUpdate.news"
 end
 
-every 1.day do
+every 1.day, roles: [:whenever] do
   runner "BatchUpdate.blog_count"
 end

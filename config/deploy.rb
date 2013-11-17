@@ -8,7 +8,14 @@ load "config/recipes/nodejs"
 load "config/recipes/rbenv"
 load "config/recipes/check"
 
+role :whenever, "106.187.46.171"
 server "106.187.46.171", :web, :app, :db, primary: true
+
+
+set :whenever_roles, "whenever"
+set :whenever_command, "bundle exec whenever"
+require 'whenever/capistrano'
+
 
 set :application, "yosoku_navi"
 set :user, "deployer"
