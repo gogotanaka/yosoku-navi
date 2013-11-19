@@ -60,7 +60,7 @@
                 <h2><%= @consultant.title %>の口コミ</h2>
 
                 <ul class="toushikomon-review-list-box">
-                    <%= @consultant.comments.each do |comment| %>
+                    <% @consultant.comments.each do |comment| %>
                         <li class="toushikomon-review-list clearfix">
                             <dl class="clearfix">
                                 <dt><%= comment.sender %></dt>
@@ -70,11 +70,6 @@
                         </li>
                     <% end %>
                 </ul>
-
-
-         
-
-
 
                 <div class="from-write">
                     <h3>口コミを書き込みする</h3>
@@ -101,8 +96,6 @@
 
         </article>
         <!--//main-->
-
-
 
 
 

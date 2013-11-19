@@ -23,14 +23,15 @@
 	<section class="rank-box">
 		<h3><img src="/img/sidebar-toushikomon-rank.png" alt="投資顧問ランキングTOP3" /></h3>
 		<dl>
-			<% Consultant.all.each do |consultant| %>
-				<dt class="rank-1"><%= link_to consultant.title, consultant_path(consultant) %></dt>
+			<% Consultant.select("COUNT(comments.id) AS num, consultants.id").joins(:comments).group("consultants.id").order("num DESC").limit(3).each.with_index do |item,i| %>
+			  <% consultant = Consultant.find(item.id) %>
+				<dt class="rank-<%= i + 1 %>"><%= link_to consultant.title, consultant_path(consultant) %></dt>
 				<dd class="clearfix">
 					<a href="" target="_blank"><img src="/img/thumbnail.png" alt="株マイスター" /></a>
 					<ul>
-						<li><span>登録</span>：完全無料</li>
-						<li><span>無料情報</span>：あり</li>
-						<li><span>収益率</span>：180%</li>
+						<li><span>登録</span>：<%= consultant.regist %></li>
+						<li><span>無料情報</span>：<%= consultant.info %></li>
+						<li><span>収益率</span>：<%= consultant.rate %></li>
 					</ul>
 				</dd>
 			<% end %>

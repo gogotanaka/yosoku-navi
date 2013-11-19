@@ -27,7 +27,9 @@
 		<!--header-->
 		<header id="header" class="clearfix">
 
-			<p><a href="./index.html"><img src="/img/logo.png" alt="株価予想NAVI" /></a></p>
+			<p>
+				<%= link_to image_tag("/img/logo.png"), root_path %>
+			</p>
 
 			<div class="mail-box">
         <% @report = Report.new %>

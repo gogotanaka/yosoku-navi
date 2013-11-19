@@ -2,7 +2,7 @@
 	<ol>
 		<li class="arrow"><%= link_to "HOME", root_path %></li>
 		<li class="arrow"><%= link_to "銘柄一覧", stocks_path %></li>
-		<li><strong>8515 ガンホーオンラインエンターテイメント</strong></li>
+		<li><strong><%= @stock.code %> <%= @stock.name %></strong></li>
 	</ol>
 </div>
 <!--//pan-navi-->
@@ -55,7 +55,7 @@
 						<dt>株価 <span>(15:00)</span></dt>
 						<dd class="today-price"><%= @stock.price %></dd>
 						<dt>前日比</dt>
-						<dd class="up">+34,000(+2.83%)</dd>
+						<dd class="up"><%= compare(@stock.previousprice, @stock.price) %></dd>
 					</dl>
 
 					<ul class="clearfix">
@@ -73,9 +73,9 @@
 						</span></li>
 						<li>前日出来高<span>81,667株</span></li>
 						<li>出来高増加率<span>45%</span></li>
-						<li>信用売残<span>30,637株</span></li>
+						<li>信用売残<span><%= @stock.margin_selling %>株</span></li>
 						<li>信用売残増減<span>0株</span></li>
-						<li>信用買残<span>-6,352株</span></li>
+						<li>信用買残<span>-<%= @stock.margin_buying %>株</span></li>
 						<li>信用買残増減<span>0株</span></li>
 					</ul>
 

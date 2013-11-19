@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.number_field :category %>
+    <%= f.select :category, {"あ" => 0, "か" => 1, "さ" => 2, "た" => 3, "な" => 4, "は" => 5, "ま" => 6, "や" => 7, "ら" => 8, "わ" => 9, "英数字" => 10} %>
   </div>
   <div class="field">
     <%= f.label :contents %><br />
-    <%= f.text_field :contents %>
+    <%= f.text_area :contents %>
   </div>
   <div class="field">
     <%= f.label :site_name %><br />
@@ -53,7 +53,7 @@
   </div>
   <div class="field">
     <%= f.label :info %><br />
-    <%= f.text_field :info %>
+    <%= f.text_area :info %>
   </div>
   <div class="field">
     <%= f.label :regist %><br />
