@@ -1,101 +1,95 @@
 <div id="pan-navi" class="clearfix">
-<ol>
-<li class="arrow"><%= link_to "HOME", root_path %></li>
-<li><strong>銘柄一覧</strong></li>
-</ol>
+	<ol>
+		<li class="arrow"><%= link_to "HOME", root_path %></li>
+		<li><strong>銘柄一覧</strong></li>
+	</ol>
 </div>
 <!--//pan-navi-->
 
 <!--content-->
 <div id="content" class="clearfix">
 
-<!--content-box-->
-<div id="content-box" class="clearfix">
+	<!--content-box-->
+	<div id="content-box" class="clearfix">
 
-<!--main-->
-<article id="main" class="clearfix">
+		<!--main-->
+		<article id="main" class="clearfix">
 
-<div class="title-bar">
-<h1><img src="./img/title-bar-brand-list.png" alt="銘柄一覧" /></h1>
-</div>
+			<div class="title-bar">
+				<h1><img src="./img/title-bar-brand-list.png" alt="銘柄一覧" /></h1>
+			</div>
 
-<section class="brand-box">
-<h2>コードから銘柄を探す</h2>
-<ul class="clearfix">
-<li><a href="./brand-list-content.html">1000</a></li>
-<li><a href="./brand-list-content.html">1500</a></li>
-<li><a href="./brand-list-content.html">2000</a></li>
-<li><a href="./brand-list-content.html">2500</a></li>
-<li><a href="./brand-list-content.html">3000</a></li>
-<li><a href="./brand-list-content.html">3500</a></li>
-<li><a href="./brand-list-content.html">4000</a></li>
-<li><a href="./brand-list-content.html">4500</a></li>
-<li><a href="./brand-list-content.html">5000</a></li>
-<li><a href="./brand-list-content.html">5500</a></li>
-<li><a href="./brand-list-content.html">6000</a></li>
-<li><a href="./brand-list-content.html">6500</a></li>
-<li><a href="./brand-list-content.html">7000</a></li>
-<li><a href="./brand-list-content.html">7500</a></li>
-<li><a href="./brand-list-content.html">8000</a></li>
-<li><a href="./brand-list-content.html">8500</a></li>
-<li><a href="./brand-list-content.html">9000</a></li>
-<li><a href="./brand-list-content.html">9500</a></li>
-</ul>
-</section>
+			<section class="brand-box">
+				<h2>コードから銘柄を探す</h2>
+				<ul class="clearfix">
+					<li><a href="./brand-list-content.html">1000</a></li>
+					<li><a href="./brand-list-content.html">1500</a></li>
+					<li><a href="./brand-list-content.html">2000</a></li>
+					<li><a href="./brand-list-content.html">2500</a></li>
+					<li><a href="./brand-list-content.html">3000</a></li>
+					<li><a href="./brand-list-content.html">3500</a></li>
+					<li><a href="./brand-list-content.html">4000</a></li>
+					<li><a href="./brand-list-content.html">4500</a></li>
+					<li><a href="./brand-list-content.html">5000</a></li>
+					<li><a href="./brand-list-content.html">5500</a></li>
+					<li><a href="./brand-list-content.html">6000</a></li>
+					<li><a href="./brand-list-content.html">6500</a></li>
+					<li><a href="./brand-list-content.html">7000</a></li>
+					<li><a href="./brand-list-content.html">7500</a></li>
+					<li><a href="./brand-list-content.html">8000</a></li>
+					<li><a href="./brand-list-content.html">8500</a></li>
+					<li><a href="./brand-list-content.html">9000</a></li>
+					<li><a href="./brand-list-content.html">9500</a></li>
+				</ul>
+			</section>
 
-<section class="brand-box">
-<h2>市場から銘柄を探す</h2>
-<ul class="clearfix">
-<li><a href="./brand-list-content.html">東証1部</a></li>
-<li><a href="./brand-list-content.html">東証2部</a></li>
-<li><a href="./brand-list-content.html">東証マザーズ</a></li>
-<li><a href="./brand-list-content.html">JASDAQスタンダード</a></li>
-<li><a href="./brand-list-content.html">JASDAQグロース</a></li>
-<li><a href="./brand-list-content.html">名証1部</a></li>
-<li><a href="./brand-list-content.html">名証2部</a></li>
-<li><a href="./brand-list-content.html">名証セントレックス</a></li>
-<li><a href="./brand-list-content.html">札証</a></li>
-<li><a href="./brand-list-content.html">福証</a></li>
-</ul>
-</section>
+			<section class="brand-box">
+				<h2>市場から銘柄を探す</h2>
+				<ul class="clearfix">
+					<li>
+						<%= link_to "東証1部", market_stock_path("東証1部") %>
+					</li>
+					<li>
+						<%= link_to "東証2部", market_stock_path("東証2部") %>
+					</li>
+					<li>
+						<%= link_to "東証マザーズ", market_stock_path("東証マザーズ") %>
+					</li>
+					<li>
+						<%= link_to "JASDAQスタンダード", market_stock_path("JASDAQスタンダード") %>
+					</li>
+					<li>
+						<%= link_to "JASDAQグロース", market_stock_path("JASDAQグロース") %>
+					</li>
+					<li>
+						<%= link_to "名証1部", market_stock_path("名証1部") %>
+					</li>
+					<li>
+						<%= link_to "名証2部", market_stock_path("名証2部") %>
+					</li>
+					<li>
+						<%= link_to "名証セントレックス", market_stock_path("名証セントレックス") %>
+					</li>
+					<li>
+						<%= link_to "札証", market_stock_path("札証") %>
+					</li>
+					<li>
+						<%= link_to "福証", market_stock_path("福証") %>
+					</li>
+				</ul>
+			</section>
 
-<section class="brand-box">
-<h2>業種から銘柄を探す</h2>
-<ul class="clearfix">
-<li><a href="./brand-list-content.html">水産・農林業</a></li>
-<li><a href="./brand-list-content.html">鉱業</a></li>
-<li><a href="./brand-list-content.html">建設業</a></li>
-<li><a href="./brand-list-content.html">食料品</a></li>
-<li><a href="./brand-list-content.html">繊維製品</a></li>
-<li><a href="./brand-list-content.html">パルプ・紙</a></li>
-<li><a href="./brand-list-content.html">化学</a></li>
-<li><a href="./brand-list-content.html">医薬品</a></li>
-<li><a href="./brand-list-content.html">石油・石炭製品</a></li>
-<li><a href="./brand-list-content.html">ゴム製品</a></li>
-<li><a href="./brand-list-content.html">ガラス・土石製品</a></li>
-<li><a href="./brand-list-content.html">鉄鋼</a></li>
-<li><a href="./brand-list-content.html">非鉄金属</a></li>
-<li><a href="./brand-list-content.html">金属製品</a></li>
-<li><a href="./brand-list-content.html">機械</a></li>
-<li><a href="./brand-list-content.html">電気機器</a></li>
-<li><a href="./brand-list-content.html">輸送用機器</a></li>
-<li><a href="./brand-list-content.html">精密機器</a></li>
-<li><a href="./brand-list-content.html">その他製品</a></li>
-<li><a href="./brand-list-content.html">電気・ガス業</a></li>
-<li><a href="./brand-list-content.html">陸運業</a></li>
-<li><a href="./brand-list-content.html">海運業</a></li>
-<li><a href="./brand-list-content.html">空運業</a></li>
-<li><a href="./brand-list-content.html">倉庫・運輸関連業</a></li>
-<li><a href="./brand-list-content.html">情報・通信</a></li>
-<li><a href="./brand-list-content.html">卸売業</a></li>
-<li><a href="./brand-list-content.html">小売業</a></li>
-<li><a href="./brand-list-content.html">銀行業</a></li>
-<li><a href="./brand-list-content.html">証券業</a></li>
-<li><a href="./brand-list-content.html">保険業</a></li>
-<li><a href="./brand-list-content.html">その他金融業</a></li>
-<li><a href="./brand-list-content.html">不動産業</a></li>
-<li><a href="./brand-list-content.html">サービス業</a></li>
-</ul>
-</section>
+			<section class="brand-box">
+				<h2>業種から銘柄を探す</h2>
+				<ul class="clearfix">
+					 <% ["水産・農林業", "鉱業", "建設業", "食料品", "繊維製品", "パルプ・紙", "化学", "医薬品", "石油・石炭製品", "ゴム製品", "ガラス・土石製品", "鉄鋼", "非鉄金属", "金属製品", "機械", "電気機器", "輸送用機器", "精密機器", "その他製品", "電気・ガス業", "陸運業", "海運業", "空運業", "倉庫・運輸関連業", "情報・通信", "卸売業", "小売業", "銀行業", "証券業", "保険業", "その他金融業", "不動産業", "サービス業"].each do |name| %>
 
-</article>
+						<li>
+							<%= link_to name, industry_stock_path(name) %>
+						</li>
+					<% end %>
+
+				</ul>
+			</section>
+
+		</article>

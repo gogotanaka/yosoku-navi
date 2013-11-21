@@ -85,4 +85,10 @@ class StocksController < ApplicationController
     word = params[:word]
     @stocks = Stock.where("name LIKE :word", word: "%#{word}%").paginate(:page => params[:page], :per_page => 30)
   end
+
+  def market
+  end
+
+  def industry
+  end
 end

@@ -24,7 +24,9 @@
 
 				<dl class="clearfix">
 					<dt>市場</dt>
-					<dd><a href="./brand-list-content.html"><%= @stock.market %></a></dd>
+					<dd>
+						<%= link_to @stock.market, market_stock_path(@stock.market) %>
+					</dd>
 					<dt>業種</dt>
 					<dd><a href="./brand-list-content.html">情報・通信</a></dd>
 				</dl>
@@ -46,7 +48,7 @@
 
 			</div>
 
-			<p class="title-dis">PCオンラインゲーム「ラグナロク」から出発。スマホゲーム「パズル＆ドラゴン」が大当たり。</p>
+			<p class="title-dis"></p>
 
 			<div class="stock-data clearfix">
 

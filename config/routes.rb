@@ -23,6 +23,9 @@ Kabudata::Application.routes.draw do
 
 
   resources :stocks do
+    member do
+      get :market, :number, :industry
+    end
     collection do
       post :search
     end
