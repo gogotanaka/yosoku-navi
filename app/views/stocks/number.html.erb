@@ -3,7 +3,8 @@
 			<ol>
 				<li class="arrow"><a href="./index.html">HOME</a></li>
 				<li class="arrow"><a href="./brand-list.html">銘柄一覧</a></li>
-        <li><strong><%= @market %>の銘柄一覧</strong></li>
+        <li>
+          <strong><%= @number %>〜<%= @number + 499 %>台の銘柄一覧</strong></li>
 			</ol>
 		</div>
 		<!--//pan-navi-->
@@ -16,16 +17,18 @@
 
 				<!--main-->
 				<article id="main" class="clearfix">
+
 					<div class="title-bar">
-						<h1><%= @market %>の銘柄一覧</h1>
+						<h1><%= @number %>〜<%= @number + 499 %>台の銘柄一覧</h1>
 					</div>
+
 					<ul id="brand-menu" class="clearfix">
 						<li id="brand-menu1" class="now"><span>コード別</span></li>
 						<li id="brand-menu2"><span>市場別</span></li>
 						<li id="brand-menu3"><span>業種別</span></li>
 					</ul>
 
-				  <div class="brand-list-box">
+					<div class="brand-list-box">
             <table>
               <thead>
                 <tr>

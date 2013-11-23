@@ -22,24 +22,12 @@
 			<section class="brand-box">
 				<h2>コードから銘柄を探す</h2>
 				<ul class="clearfix">
-					<li><a href="./brand-list-content.html">1000</a></li>
-					<li><a href="./brand-list-content.html">1500</a></li>
-					<li><a href="./brand-list-content.html">2000</a></li>
-					<li><a href="./brand-list-content.html">2500</a></li>
-					<li><a href="./brand-list-content.html">3000</a></li>
-					<li><a href="./brand-list-content.html">3500</a></li>
-					<li><a href="./brand-list-content.html">4000</a></li>
-					<li><a href="./brand-list-content.html">4500</a></li>
-					<li><a href="./brand-list-content.html">5000</a></li>
-					<li><a href="./brand-list-content.html">5500</a></li>
-					<li><a href="./brand-list-content.html">6000</a></li>
-					<li><a href="./brand-list-content.html">6500</a></li>
-					<li><a href="./brand-list-content.html">7000</a></li>
-					<li><a href="./brand-list-content.html">7500</a></li>
-					<li><a href="./brand-list-content.html">8000</a></li>
-					<li><a href="./brand-list-content.html">8500</a></li>
-					<li><a href="./brand-list-content.html">9000</a></li>
-					<li><a href="./brand-list-content.html">9500</a></li>
+          <% 18.times do |i| %>
+            <% num = 1000 + 500*i %>
+            <li>
+              <%= link_to num.to_s, number_stock_path(num) %>
+            </li>
+          <% end %>
 				</ul>
 			</section>
 
